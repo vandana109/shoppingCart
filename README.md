@@ -1,5 +1,7 @@
 # ShoppingCart
 
+For testing, here is the link of the githubpages https://vandana109.github.io/shoppingCart
+
 To run this application locally, follow below steps:
 1. Copy code by running 'git clone https://github.com/vandana109/shoppingCart.git' in the desired directory of the command prompt.
 2. Move to shoppingCart directory - cd shoppingCart
