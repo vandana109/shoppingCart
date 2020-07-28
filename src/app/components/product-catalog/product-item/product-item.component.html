@@ -1,0 +1,12 @@
+<article class="product">
+  <div class="product-image" >
+    <img [src]="product.image" alt=product>
+  </div>
+  <p><strong>{{product.name}}</strong></p>
+  <strong>Price: </strong>
+  <app-product-price [price]='product.price'></app-product-price>
+  <div class="clear-float">
+    <p class="float-left cart-message" [hidden]='!showMessage'>Added to cart successfully</p>
+    <button class="button-blue float-right" (click)='showMessageFn()'>Add to cart</button>
+  </div>
+</article>

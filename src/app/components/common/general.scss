@@ -1,0 +1,39 @@
+@import '../common/variables.scss';
+
+.content-center {
+  text-align: center;
+  height: 300px;
+  padding-top: 100px;
+}
+
+.button-blue {
+  font-size: 15px;
+  border-radius: 5px;
+  padding: 10px 15px;
+  border: none;
+  background: $blue;
+  color: $white;
+}
+
+.margin-top20 {
+  margin-top: 20px;
+}
+
+a {
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.border-bottom {
+  padding-bottom: 10px;
+  border-bottom : 2px solid #0c0c63;
+}
+
+.container-fluid {
+  height: 88vh !important;
+}
+
+.full-height {
+  height: 100%;
+}

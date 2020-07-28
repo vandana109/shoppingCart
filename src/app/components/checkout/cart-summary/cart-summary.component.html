@@ -1,0 +1,31 @@
+<div class="cart-summary">
+  <ul class="summary-list">
+    <li *ngFor="let i of cartItemsArray"  class="summary-list-item">
+      <p class="summary-left">
+        <span class="product-item-name">{{cartItems[i].name}}</span>
+        <span>X </span>
+        <strong>{{cartItems[i].quantity}}</strong>
+      </p>
+      <p class="summary-right">
+        : <span>
+          {{currencySymbol}}{{getTotalPriceForProduct(cartItems[i].price, cartItems[i].quantity)}}</span>
+      </p>
+    </li>
+  </ul>
+  <p class="border-bottom">
+    <span class="summary-left">Total</span>:
+    <span class="summary-right">
+      {{currencySymbol}}{{getTotalPrice()}}
+    </span>
+  </p>
+  <p class="border-bottom">
+    <span  class="summary-left">Discount</span>:
+    <span  class="summary-right">{{discountPercent}}%</span>
+  </p>
+  <p>
+    <span class="summary-left">SUB TOTAL</span>:
+    <span class="summary-right">
+      {{currencySymbol}}{{getPriceAfterDiscount()}}
+    </span>
+  </p>
+</div>

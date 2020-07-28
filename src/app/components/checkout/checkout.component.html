@@ -1,0 +1,26 @@
+<div class="container checkout" *ngIf="cartItemsArray.length > 0">
+  <div class="row">
+    <div class="col-md-7">
+      <app-cart-list
+        [cartItems]='cartItems'
+        [cartItemsArray]='cartItemsArray'>
+      </app-cart-list>
+    </div>
+    <div class="col-md-5">
+      <app-cart-summary
+        [cartItems]='cartItems'
+        [cartItemsArray]='cartItemsArray'>
+      </app-cart-summary>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col margin-top20">
+      <a [routerLink]="['']" class="brand-name float-left button-blue">< Navigate to Homepage</a>
+      <button class="button-blue float-right">Checkout</button>
+    </div>
+  </div>
+</div>
+<div *ngIf="cartItemsArray.length === 0" class="content-center">
+  <p>No items in the cart, please add </p>
+  <a [routerLink]="['']" class="brand-name">Navigate to Homepage</a>
+</div>

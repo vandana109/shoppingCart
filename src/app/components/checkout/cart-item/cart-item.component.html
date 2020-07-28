@@ -1,0 +1,8 @@
+<div class="row cart-item">
+  <div class="col">{{cartItem.name}}</div>
+  <div class="col-md-4">
+    <a class="plus-minus-icon" (click)=decreaseCount()>-</a>
+    <span class="product-quantity">{{cartItem.quantity}}</span>
+    <a class="plus-minus-icon" (click)=increaseCount()>+</a>
+  </div>
+</div>

@@ -1,0 +1,28 @@
+.product {
+  border: 2px solid #0c0c63;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 10px;
+
+  .product-image {
+    text-align: center;
+    img {
+      width: 80%;
+      margin: 0 auto;
+      max-height: 250px;
+      transition: width 1s;
+      &:hover {
+        width: 100%;
+      }
+    }
+  }
+
+  .cart-message {
+    color: green;
+    font-size: 14px;
+  }
+}
+
+.clear-float {
+  overflow: auto;
+}

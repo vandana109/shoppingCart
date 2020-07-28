@@ -1,0 +1,8 @@
+<div>
+  <app-cart-item
+    [cartItem]= 'cartItems[item]'
+    *ngFor="let item of cartItemsArray"
+    (increaseQuantity)="increaseQuantity(item)"
+    (decreaseQuantity)="decreaseQuantity(item)">
+  </app-cart-item>
+</div>

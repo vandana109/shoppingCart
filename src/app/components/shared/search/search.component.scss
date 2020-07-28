@@ -1,0 +1,23 @@
+.search-component {
+  position: relative;
+  .search-field {
+    width: 60%;
+    border-radius: 10px;
+    padding: 5px 10px;
+    transition: width 1s;
+    &:focus {
+      width: 100%;
+      outline: none;
+    }
+  }
+  .search-icon {
+    height:32px;
+    width:32px;
+    border: none;
+    cursor: pointer;
+    color:#0c0c63;;
+    position: absolute;
+    right: 5px;
+    top: 10px;
+  }
+}

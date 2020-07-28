@@ -1,0 +1,13 @@
+<div class="col sorting">
+  <div class="float-right">
+    <label for="sorting">Sorting:</label>
+    <select class='select-option' id='sorting'
+      #mySelect
+      (change)='onOptionSelected(mySelect.value)'>
+      <option class='option'
+        *ngFor='let option of sortingOptions'
+        [value]="option.value">{{option.text}}
+      </option>
+    </select>
+  </div>
+</div>

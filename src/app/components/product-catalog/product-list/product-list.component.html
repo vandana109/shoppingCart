@@ -1,0 +1,16 @@
+<div class="row">
+  <app-product-sort></app-product-sort>
+</div>
+<div *ngIf="products">
+  <div class="row"  *ngIf="products.length > 0">
+    <app-product-item
+      class="col-md-4"
+      *ngFor="let product of products"
+      [product]="product"
+      (click)="addToCart(product)">
+    </app-product-item>
+  </div>
+  <div class="row" *ngIf="products.length === 0">
+    <p class="content-center">No products available</p>
+  </div>
+</div>

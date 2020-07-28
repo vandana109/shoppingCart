@@ -1,0 +1,23 @@
+<p class="section-heading">Price filters:</p>
+<form name="form" (ngSubmit)="f.form.valid && applyFilters()" #f="ngForm" novalidate>
+  <div class="form-group">
+      <label for="minPrice">Min price:</label>
+      <input type="number" ng-pattern="/^-?\d+\.?\d*$/" class="form-control" name="minPrice" [(ngModel)]="model.minPrice"
+        #minPrice="ngModel" [ngClass]="{ 'is-invalid': f.submitted && minPrice.invalid }" min="1" minlength="1"/>
+      <div *ngIf="f.submitted && minPrice.invalid" class="invalid-feedback">
+        <div *ngIf="minPrice.errors.required">Min Price is required and valid</div>
+      </div>
+  </div>
+  <div class="form-group">
+      <label for="maxPrice">Max price:</label>
+      <input type="number" ng-pattern="/^-?\d+\.?\d*$/" class="form-control" name="maxPrice" [(ngModel)]="model.maxPrice"
+        #maxPrice="ngModel" [ngClass]="{ 'is-invalid': f.submitted && maxPrice.invalid }" min="1" minlength="1" />
+      <div *ngIf="f.submitted && maxPrice.invalid" class="invalid-feedback">
+        <div *ngIf="maxPrice.errors.required">Max price is required and valid</div>
+      </div>
+  </div>
+  <div class="form-group">
+      <button class="button-blue" [disabled]="!f.form.dirty || f.form.invalid">Apply</button>
+  </div>
+  <button class="button-blue" [disabled]='!filtersApplied' (click)="clearFilters()">Clear filters</button>
+</form>
